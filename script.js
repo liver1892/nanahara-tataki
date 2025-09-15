@@ -8,13 +8,21 @@ let time = 30;
 let gameInterval;
 let moleInterval;
 
-// 10個の穴をHTMLに動的に生成
-for (let i = 0; i < 10; i++) {
+// 9個の穴をHTMLに動的に生成
+for (let i = 0; i < 9; i++) {
     const holeDiv = document.createElement('div');
     holeDiv.classList.add('hole');
+    
+    // マンホールの画像を追加
+    const holeImage = document.createElement('img');
+    holeImage.src = 'images/manho-ru.png';
+    holeImage.classList.add('hole-image');
+    
     const moleImage = document.createElement('img');
     moleImage.src = 'images/nanahara.png';
     moleImage.classList.add('mole');
+    
+    holeDiv.appendChild(holeImage);
     holeDiv.appendChild(moleImage);
     holes.appendChild(holeDiv);
 }
