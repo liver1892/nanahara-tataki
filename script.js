@@ -8,7 +8,6 @@ let time = 30;
 let gameInterval;
 let moleInterval;
 
-// 9個の穴をHTMLに動的に生成
 for (let i = 0; i < 9; i++) {
     const holeDiv = document.createElement('div');
     holeDiv.classList.add('hole');
