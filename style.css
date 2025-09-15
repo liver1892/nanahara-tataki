@@ -23,7 +23,7 @@ body {
 
 .hole-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3x3のレイアウトに変更 */
     grid-gap: 20px;
     width: 100%;
     transform: rotateX(50deg) translateZ(-50px);
@@ -35,11 +35,19 @@ body {
     position: relative;
     width: 100%;
     padding-bottom: 100%;
-    background-color: #8B4513;
+    background-color: transparent; /* 背景色を透明に */
     border-radius: 50%;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: none; /* 影を消す */
     overflow: hidden;
     transform: rotateX(-50deg);
+}
+
+.hole-image {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* 画像をモグラの上に配置 */
 }
 
 .mole {
@@ -50,6 +58,7 @@ body {
     bottom: -100%;
     margin: auto;
     transition: bottom 0.1s ease-in-out;
+    z-index: 2; /* モグラを穴の画像より前に配置 */
 }
 
 .hole.up .mole {
@@ -65,12 +74,4 @@ body {
     background-color: #007BFF;
     color: white;
     border-radius: 5px;
-}
-
-/* スマホ用レスポンシブデザイン */
-@media (max-width: 768px) {
-  .hole-container {
-    grid-template-columns: repeat(3, 1fr); /* 画面が狭いときは3列にする */
-    grid-gap: 15px;
-  }
 }
