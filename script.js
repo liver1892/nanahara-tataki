@@ -57,10 +57,17 @@ allHoles.forEach(hole => {
             score++;
             scoreDisplay.textContent = score;
             hole.classList.remove('up');
+
+            // 叩いた画像を一時的に非表示にする
+            const moleImage = hole.querySelector('.mole');
+            moleImage.style.visibility = 'hidden';
+
+            // 0.1秒後に再び表示する
+            setTimeout(() => {
+                moleImage.style.visibility = 'visible';
+            }, 100);
         }
     });
 });
 
-
 startButton.addEventListener('click', startGame);
-
