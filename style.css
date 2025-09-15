@@ -57,7 +57,7 @@ body {
     left: 50%;
     bottom: -100%;
     z-index: 2;
-    transform: translate(-50%, 0); /* この値を調整して上下の位置を修正します */
+    transform: translate(-100%, 0); /* この値を調整して上下の位置を修正します */
     transition: bottom 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
 
@@ -75,3 +75,4 @@ body {
     color: white;
     border-radius: 5px;
 }
+
