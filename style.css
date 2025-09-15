@@ -30,9 +30,9 @@ body {
 .hole {
     position: relative;
     width: 100%;
-    padding-bottom: 100%; /* アスペクト比を1:1に保つ */
-    background-color: #8B4513; /* 土の色 */
-    border-radius: 50%; /* 丸い穴 */
+    padding-bottom: 100%;
+    background-color: #8B4513;
+    border-radius: 50%;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
@@ -42,13 +42,13 @@ body {
     width: 100%;
     left: 0;
     right: 0;
-    bottom: -100%; /* 穴の中に隠す */
+    bottom: -100%;
     margin: auto;
-    transition: bottom 0.3s ease-in-out;
+    transition: bottom 0.1s ease-in-out; /* ここを修正しました */
 }
 
 .hole.up .mole {
-    bottom: 0; /* 穴から出す */
+    bottom: 0;
 }
 
 #startButton {
@@ -62,10 +62,9 @@ body {
     border-radius: 5px;
 }
 
-/* スマホ用レスポンシブデザイン */
 @media (max-width: 768px) {
   .hole-container {
-    grid-template-columns: repeat(3, 1fr); /* 画面が狭いときは3列にする */
-    grid-gap: 15px; /* 隙間を少し減らす */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
   }
 }
