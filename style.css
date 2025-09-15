@@ -23,7 +23,7 @@ body {
 
 .hole-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3x3のレイアウトに変更 */
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     width: 100%;
     transform: rotateX(50deg) translateZ(-50px);
