@@ -55,14 +55,14 @@ body {
     position: absolute;
     width: 80%;
     left: 50%;
-    bottom: -150%; /* この値を大きくしてモグラを完全に隠します */
+    bottom: -100%;
     z-index: 2;
     transform: translate(-40%, -80%);
-    transition: bottom 0.4s ease-in-out, transform 0.1s ease-in-out;
+    transition: bottom 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .hole.up .mole {
-    bottom: 50%; /* この値を調整して、モグラが出る高さを制御します */
+    bottom: 0;
 }
 
 #startButton {
@@ -75,4 +75,3 @@ body {
     color: white;
     border-radius: 5px;
 }
-
