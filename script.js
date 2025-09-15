@@ -13,7 +13,7 @@ for (let i = 0; i < 10; i++) {
     const holeDiv = document.createElement('div');
     holeDiv.classList.add('hole');
     const moleImage = document.createElement('img');
-    moleImage.src = 'images/スクリーンショット-2025-09-14-12.56.png'; // 画像のパスを指定
+    moleImage.src = 'nanahara'; // 画像のパスを指定
     moleImage.classList.add('mole');
     holeDiv.appendChild(moleImage);
     holes.appendChild(holeDiv);
@@ -60,5 +60,6 @@ allHoles.forEach(hole => {
         }
     });
 });
+
 
 startButton.addEventListener('click', startGame);
