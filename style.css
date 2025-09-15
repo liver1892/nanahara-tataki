@@ -66,5 +66,6 @@ body {
 @media (max-width: 768px) {
   .hole-container {
     grid-template-columns: repeat(3, 1fr); /* 画面が狭いときは3列にする */
+    grid-gap: 15px; /* 隙間を少し減らす */
   }
 }
