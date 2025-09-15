@@ -1,3 +1,4 @@
+/* style.css */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -55,10 +56,11 @@ body {
     position: absolute;
     width: 80%;
     left: 50%;
-    bottom: -100%;
+    /* ここから修正 */
+    bottom: -100px; /* 画像の高さに合わせてピクセル値で調整 */
     z-index: 2;
-    transform: translate(-40%, -80%);
-    transition: bottom 0.5s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease-in-out;
 }
 
 .hole.up .mole {
