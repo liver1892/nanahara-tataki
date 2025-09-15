@@ -13,7 +13,6 @@ for (let i = 0; i < 9; i++) {
     const holeDiv = document.createElement('div');
     holeDiv.classList.add('hole');
     
-    // マンホールの画像を追加
     const holeImage = document.createElement('img');
     holeImage.src = 'images/manho-ru.png';
     holeImage.classList.add('hole-image');
@@ -29,7 +28,6 @@ for (let i = 0; i < 9; i++) {
 
 const allHoles = document.querySelectorAll('.hole');
 
-// ランダムにモグラを表示する関数
 function randomHole() {
     const random = Math.floor(Math.random() * allHoles.length);
     const hole = allHoles[random];
@@ -39,7 +37,6 @@ function randomHole() {
     }, 700);
 }
 
-// ゲーム開始処理
 function startGame() {
     score = 0;
     time = 30;
@@ -61,16 +58,16 @@ function startGame() {
     }, 1000);
 }
 
-// モグラを叩いた時の処理
 allHoles.forEach(hole => {
     hole.addEventListener('click', () => {
         if (hole.classList.contains('up')) {
             score++;
             scoreDisplay.textContent = score;
-            hole.classList.remove('up');
-
+            
             const moleImage = hole.querySelector('.mole');
             moleImage.style.visibility = 'hidden';
+
+            hole.classList.remove('up');
 
             setTimeout(() => {
                 moleImage.style.visibility = 'visible';
