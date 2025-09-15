@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.hole-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    width: 600px;
+    margin: 20px auto;
+}
+
+.hole {
+    width: 100px;
+    height: 100px;
+    background-color: #8B4513; /* 土の色 */
+    border-radius: 50%; /* 丸い穴 */
+    position: relative;
+    overflow: hidden;
+}
+
+.mole {
+    width: 100%;
+    position: absolute;
+    bottom: -100px; /* 穴の中に隠す */
+    transition: bottom 0.3s ease-in-out;
+}
+
+.hole.up .mole {
+    bottom: 0; /* 穴から出す */
+}
