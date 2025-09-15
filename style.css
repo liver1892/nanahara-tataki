@@ -8,6 +8,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    perspective: 800px; /* 3D効果を適用 */
 }
 
 .score-board {
@@ -25,6 +26,8 @@ body {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px;
     width: 100%;
+    transform: rotateX(30deg) rotateY(-10deg); /* 傾けて斜めに見せる */
+    transform-style: preserve-3d;
 }
 
 .hole {
@@ -44,7 +47,7 @@ body {
     right: 0;
     bottom: -100%;
     margin: auto;
-    transition: bottom 0.1s ease-in-out; /* ここを修正しました */
+    transition: bottom 0.1s ease-in-out;
 }
 
 .hole.up .mole {
