@@ -8,10 +8,12 @@ let time = 30;
 let gameInterval;
 let moleInterval;
 
+// 9個の穴をHTMLに動的に生成
 for (let i = 0; i < 9; i++) {
     const holeDiv = document.createElement('div');
     holeDiv.classList.add('hole');
     
+    // マンホールの画像を追加
     const holeImage = document.createElement('img');
     holeImage.src = 'images/manho-ru.png';
     holeImage.classList.add('hole-image');
@@ -27,15 +29,17 @@ for (let i = 0; i < 9; i++) {
 
 const allHoles = document.querySelectorAll('.hole');
 
+// ランダムにモグラを表示する関数
 function randomHole() {
     const random = Math.floor(Math.random() * allHoles.length);
     const hole = allHoles[random];
     hole.classList.add('up');
     setTimeout(() => {
         hole.classList.remove('up');
-    }, 700);
+    }, 1000); // 700ミリ秒から1000ミリ秒に変更しました
 }
 
+// ゲーム開始処理
 function startGame() {
     score = 0;
     time = 30;
@@ -57,6 +61,7 @@ function startGame() {
     }, 1000);
 }
 
+// モグラを叩いた時の処理
 allHoles.forEach(hole => {
     hole.addEventListener('click', () => {
         if (hole.classList.contains('up')) {
