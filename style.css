@@ -7,13 +7,13 @@ body {
 .game-container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .score-board {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-color: #fff;
     padding: 10px;
     border-radius: 8px;
@@ -25,9 +25,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     width: 100%;
-    /* transform: rotateX(50deg) translateZ(-50px); を削除 */
     transform-style: preserve-3d;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .hole {
@@ -38,7 +37,6 @@ body {
     border-radius: 50%;
     box-shadow: none;
     overflow: hidden;
-    /* transform: rotateX(-50deg); を削除 */
 }
 
 .hole-image {
@@ -54,7 +52,7 @@ body {
     position: absolute;
     width: 80%;
     left: 50%;
-    bottom: -80px;
+    bottom: -60px; /* この値を調整して高さを修正しました */
     z-index: 2;
     transform: translateX(-50%);
     transition: bottom 0.3s ease-in-out;
