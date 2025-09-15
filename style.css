@@ -8,7 +8,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    perspective: 800px; /* 3D効果を適用 */
+    perspective: 1000px;
 }
 
 .score-board {
@@ -26,8 +26,9 @@ body {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px;
     width: 100%;
-    transform: rotateX(30deg) rotateY(-10deg); /* 傾けて斜めに見せる */
+    transform: rotateX(50deg) translateZ(-50px);
     transform-style: preserve-3d;
+    margin-top: 50px;
 }
 
 .hole {
@@ -38,6 +39,7 @@ body {
     border-radius: 50%;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    transform: rotateX(-50deg);
 }
 
 .mole {
@@ -65,9 +67,10 @@ body {
     border-radius: 5px;
 }
 
+/* スマホ用レスポンシブデザイン */
 @media (max-width: 768px) {
   .hole-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 画面が狭いときは3列にする */
     grid-gap: 15px;
   }
 }
