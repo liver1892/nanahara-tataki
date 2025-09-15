@@ -38,6 +38,9 @@ function startGame() {
     scoreDisplay.textContent = score;
     timeDisplay.textContent = time;
 
+    // ゲームが開始したらボタンを非活性化
+    startButton.disabled = true;
+
     moleInterval = setInterval(randomHole, 1000); // 1秒ごとにモグラを出す
     gameInterval = setInterval(() => {
         time--;
@@ -46,6 +49,8 @@ function startGame() {
             clearInterval(moleInterval);
             clearInterval(gameInterval);
             alert('ゲーム終了！あなたの点数は' + score + '点です。');
+            // ゲーム終了したらボタンを再度活性化
+            startButton.disabled = false;
         }
     }, 1000); // 1秒ごとに時間を減らす
 }
