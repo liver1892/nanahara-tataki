@@ -1,77 +1,74 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
 }
 
 .game-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .score-board {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 10px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .hole-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    width: 100%;
-    transform-style: preserve-3d;
-    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    transform-style: preserve-3d;
+    margin-top: 10px;
 }
 
 .hole {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
-    background-color: transparent;
-    border-radius: 50%;
-    box-shadow: none;
-    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: none;
+    overflow: hidden;
 }
 
 .hole-image {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .mole {
-    position: absolute;
-    width: 80%;
-    left: 50%;
-    bottom: 50px; /* この値を調整して高さを修正しました */
-    z-index: 2;
-    transform: translateX(-50%);
-    transition: bottom 0.3s ease-in-out;
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    bottom: -100px; /* Adjust this value to hide the mole completely below the hole. A negative value is needed. */
+    z-index: 2;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease-in-out;
 }
 
 .hole.up .mole {
-    bottom: 0;
+    bottom: 0; /* Adjust this value to control how far the mole rises. For the top of the manhole, a value close to 0 is good. */
 }
 
 #startButton {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
 }
-
-
-
