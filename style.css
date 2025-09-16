@@ -55,11 +55,11 @@ body {
     bottom: -150px;
     z-index: 2;
     transform: translateX(-50%);
-    transition: bottom 0.3s ease-in-out;
+    /* transition: bottom 0.3s ease-in-out; を削除します */
 }
 
 .hole.up .mole {
-    bottom: 80px; /* 見切れないように高さを調整しました */
+    bottom: 80px;
 }
 
 #startButton {
