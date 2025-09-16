@@ -34,9 +34,10 @@ function randomHole() {
     const random = Math.floor(Math.random() * allHoles.length);
     const hole = allHoles[random];
     hole.classList.add('up');
+    const randomTime = Math.random() * (600 - 300) + 300; // 0.3秒から0.6秒の範囲でランダムな時間を生成
     setTimeout(() => {
         hole.classList.remove('up');
-    }, 1000); // 700ミリ秒から1000ミリ秒に変更しました
+    }, randomTime);
 }
 
 // ゲーム開始処理
