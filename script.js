@@ -29,15 +29,20 @@ for (let i = 0; i < 9; i++) {
 
 const allHoles = document.querySelectorAll('.hole');
 
-// ランダムにモグラを表示する関数
+// ランダムなモグラの動きを生成する関数
 function randomHole() {
     const random = Math.floor(Math.random() * allHoles.length);
     const hole = allHoles[random];
+    
+    // 0.3秒から0.6秒の範囲でランダムな時間を生成
+    const randomSpeed = (Math.random() * (0.6 - 0.3) + 0.3).toFixed(1);
+    hole.querySelector('.mole').style.transition = `bottom ${randomSpeed}s ease-in-out`;
+    
     hole.classList.add('up');
-    const randomTime = Math.random() * (600 - 300) + 300; // 0.3秒から0.6秒の範囲でランダムな時間を生成
+    
     setTimeout(() => {
         hole.classList.remove('up');
-    }, randomTime);
+    }, 1000);
 }
 
 // ゲーム開始処理
