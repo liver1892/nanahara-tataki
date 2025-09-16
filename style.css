@@ -52,7 +52,7 @@ body {
     position: absolute;
     width: 80%;
     left: 50%;
-    bottom: -60px; /* この値を調整して高さを修正しました */
+    bottom: -80px; /* この値を調整して高さを修正しました */
     z-index: 2;
     transform: translateX(-50%);
     transition: bottom 0.3s ease-in-out;
@@ -72,3 +72,4 @@ body {
     color: white;
     border-radius: 5px;
 }
+
