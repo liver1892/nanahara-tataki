@@ -21,8 +21,8 @@ body {
 }
 
 .hole-container {
-    display: grid; /* ここを修正しました */
-    grid-template-columns: repeat(3, 1fr); /* ここを修正しました */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     width: 100%;
     transform-style: preserve-3d;
@@ -52,7 +52,7 @@ body {
     position: absolute;
     width: 80%;
     left: 50%;
-    bottom: -60px;
+    bottom: 50px; /* ここをbottom: 50px; に戻しました */
     z-index: 2;
     transform: translateX(-50%);
     transition: bottom 0.3s ease-in-out;
