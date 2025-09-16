@@ -52,14 +52,14 @@ body {
     position: absolute;
     width: 80%;
     left: 50%;
-    bottom: -150px; /* モグラが完全に隠れるように調整 */
+    bottom: -150px;
     z-index: 2;
     transform: translateX(-50%);
     transition: bottom 0.3s ease-in-out;
 }
 
 .hole.up .mole {
-    bottom: 50px; /* モグラが完全に表示されるように調整 */
+    bottom: 80px; /* 見切れないように高さを調整しました */
 }
 
 #startButton {
