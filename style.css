@@ -42,7 +42,7 @@ body {
 .hole-image {
     position: absolute;
     width: 100%;
-    top: 50%;
+    top: 30%; /* この値を調整 */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -72,6 +72,7 @@ body {
     color: white;
     border-radius: 5px;
 }
+
 
 
 
