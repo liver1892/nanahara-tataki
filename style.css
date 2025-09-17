@@ -33,32 +33,25 @@ body {
     position: relative;
     width: 100%;
     padding-bottom: 100%;
-    background-color: transparent;
-    border-radius: 50%; /* 表示範囲を丸くする修正 */
-    box-shadow: none;
+    background-image: url('images/manho-ru.png'); /* マンホール画像を背景として設定 */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; /* 表示範囲を丸くする */
     overflow: hidden;
 }
 
-.hole-image {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
+/* hole-image は不要になったので削除します */
 .mole {
     position: absolute;
     width: 80%;
     left: 50%;
-    transform: translate(-50%, 100%); /* モグラの初期位置を修正 */
+    transform: translate(-50%, 100%);
     z-index: 2;
-    transition: transform 0.6s ease-in-out; /* アニメーションをtransformに修正 */
+    transition: transform 0.6s ease-in-out;
 }
 
 .hole.up .mole {
-    transform: translate(-50%, 0%); /* 飛び出す位置を修正 */
+    transform: translate(-50%, 0%);
 }
 
 #startButton {
