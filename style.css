@@ -54,12 +54,12 @@ body {
     left: 50%;
     bottom: -150px;
     z-index: 2;
-    transform: translateX(-50%);
-    /* transition: bottom 0.3s ease-in-out; を削除します */
+    transform: translate(-50%, 0);
+    transition: bottom 0.6s ease-in-out;
 }
 
 .hole.up .mole {
-    bottom: 80px;
+    bottom: 50%; /* モグラがマンホールの真ん中から出るように調整しました */
 }
 
 #startButton {
