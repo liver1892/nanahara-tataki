@@ -52,7 +52,7 @@ body {
     position: absolute;
     width: 80%;
     left: 50%;
-    bottom: -50px;
+    bottom: -150px;
     z-index: 2;
     transform: translate(-50%, 0);
     transition: bottom 0.6s ease-in-out;
@@ -72,5 +72,6 @@ body {
     color: white;
     border-radius: 5px;
 }
+
 
 
