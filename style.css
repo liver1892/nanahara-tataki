@@ -99,29 +99,21 @@ body {
 
 
 .mole {
-
     position: absolute;
-
     width: 80%;
-
     left: 50%;
-
-    bottom: -50px;
-
+    bottom: -150px;
     z-index: 2;
-
     transform: translate(-50%, 0);
-
     transition: bottom 0.6s ease-in-out;
-
+    /* ここから追加 */
+    mask-image: radial-gradient(circle, white 100%, black 100%);
+    -webkit-mask-image: radial-gradient(circle, white 100%, black 100%);
 }
 
-
-
-.hole.up .mole {
-
-    bottom: 50%; /* モグラがマンホールの真ん中から出るように調整しました */
-
+.hole {
+    /* ここにborder-radius: 50%; があることを確認してください */
+    border-radius: 50%;
 }
 
 
@@ -145,3 +137,4 @@ body {
     border-radius: 5px;
 
 }
+
