@@ -48,11 +48,12 @@ body {
     z-index: 1;
 }
 
+/* モグラが待機している位置の調整 */
 .mole {
     position: absolute;
     width: 80%;
     left: 50%;
-    bottom: -150%; /* この値を修正。親要素の高さに対する比率で完全に隠す */
+    bottom: -150%; /* この値は元のままでOKです */
     z-index: 2;
     transform: translate(-50%, 0);
     transition: bottom 0.6s ease-in-out;
@@ -60,7 +61,8 @@ body {
 
 /* 飛び出した時の位置の調整 */
 .hole.up .mole {
-    bottom: 0; /* この値を修正。マンホールの中心から飛び出すようにする */
+    bottom: 50%; /* この値を再調整 */
+    transform: translate(-50%, -50%); /* この行を追加 */
 }
 
 /* マンホールの画像の位置調整 */
@@ -83,5 +85,6 @@ body {
     color: white;
     border-radius: 5px;
 }
+
 
 
