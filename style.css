@@ -53,7 +53,7 @@ body {
     position: absolute;
     width: 80%;
     left: 50%;
-    bottom: -150%; /* この値は元のままでOKです */
+    bottom: -200%; /* この値は元のままでOKです */
     z-index: 2;
     transform: translate(-50%, 0);
     transition: bottom 0.6s ease-in-out;
@@ -85,6 +85,7 @@ body {
     color: white;
     border-radius: 5px;
 }
+
 
 
 
