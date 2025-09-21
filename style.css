@@ -52,14 +52,25 @@ body {
     position: absolute;
     width: 80%;
     left: 50%;
-    bottom: -200px; /* この値を修正 */
+    bottom: -150%; /* この値を修正。親要素の高さに対する比率で完全に隠す */
     z-index: 2;
     transform: translate(-50%, 0);
     transition: bottom 0.6s ease-in-out;
 }
 
+/* 飛び出した時の位置の調整 */
 .hole.up .mole {
-    bottom: 65%; /* この値を修正 */
+    bottom: 0; /* この値を修正。マンホールの中心から飛び出すようにする */
+}
+
+/* マンホールの画像の位置調整 */
+.hole-image {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 #startButton {
@@ -72,4 +83,5 @@ body {
     color: white;
     border-radius: 5px;
 }
+
 
